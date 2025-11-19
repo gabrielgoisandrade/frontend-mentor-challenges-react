@@ -1,0 +1,100 @@
+:root {
+	/* variables */
+	--spacing: 0.25rem;
+	--white: hsl(0deg 0% 100%);
+	--stone-100: hsl(30deg 54% 90%);
+	--stone-150: hsl(30deg 18% 87%);
+	--stone-600: hsl(30deg 10% 34%);
+	--stone-900: hsl(24deg 5% 18%);
+	--brown-800: hsl(14deg 45% 36%);
+	--rose-800: hsl(332deg 51% 32%);
+	--rose-50: hsl(330deg 100% 98%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	color-scheme: light;
+}
+
+body {
+	min-height: 100vh;
+	font-family: Outfit, sans-serif;
+	line-height: 1.4;
+	color: var(--stone-600);
+
+	@media (width >=768px) {
+		background-color: hsl(45deg 45% 85%)
+	}
+}
+
+img,
+video,
+picture,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2 {
+	font: inherit;
+	font-family: 'Young Serif', sans-serif;
+}
+
+h1 {
+	font-size: calc(var(--spacing) * 10);
+	color: var(--stone-900)
+}
+
+h2 {
+	font-size: calc(var(--spacing) * 8);
+	color: var(--brown-800)
+}
+
+h3 {
+	font-size: calc(var(--spacing) * 5);
+	font-weight: 700;
+	color: var(--rose-800)
+}
+
+@media (width >=768px) {
+	main {
+		padding-block: calc(var(--spacing) * 20);
+		margin: 0 auto;
+		background-color: hsl(45deg 45% 85%)
+	}
+}
+
+ol,
+ul {
+	margin-inline-start: 1.5rem;
+}
+
+ul li::marker {
+	font-size: calc(var(--spacing) * 3);
+}
+
+:is(ul, ol) li::marker {
+	font-weight: bold;
+	color: var(--brown-800);
+}
+
+li {
+	padding-block: calc(var(--spacing) * 1.5);
+	padding-inline-start: calc(var(--spacing) * 4);
+}
+
+hr {
+	border: 1px solid var(--stone-150);
+}
