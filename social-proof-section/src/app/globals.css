@@ -1,0 +1,41 @@
+:root {
+	--spacing: 0.25rem;
+
+	/* primary */
+	--primary-very-dark-magenta: hsl(300deg 43% 22%);
+	--primary-soft-pink: hsl(333deg 80% 67%);
+
+	/* neutral */
+	--neutral-dark-grayish-magenta: hsl(303deg 10% 53%);
+	--neutral-light-grayish-magenta: hsl(300deg 24% 96%);
+	--neutral-white: hsl(0deg 0% 100%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font: inherit;
+	color-scheme: light;
+}
+
+body {
+	min-height: 100vh;
+	line-height: 1.4;
+}
+
+img,
+video,
+picture,
+svg {
+	display: block;
+	max-width: 100%;
+}
