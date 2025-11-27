@@ -1,5 +1,8 @@
 {
-    "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-recess-order"
+    ],
     "plugins": ["stylelint-plugin-defensive-css"],
     "rules": {
         "custom-property-pattern": null,
@@ -11,6 +14,7 @@
                 "flex-wrapping": true,
                 "background-repeat": true
             }
-        ]
+        ],
+        "scss/dollar-variable-pattern": null
     }
 }

@@ -1,0 +1,31 @@
+
+
+:root {
+	/* variables */
+	--spacing: 0.25rem;
+
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	line-height: 1.4;
+}
+
+img,
+video,
+svg,
+picture {
+	display: block;
+	max-width: 100%;
+}
