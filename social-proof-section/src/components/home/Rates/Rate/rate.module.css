@@ -1,0 +1,23 @@
+.rate {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	gap: calc(var(--spacing) * 5);
+	align-items: center;
+	justify-content: center;
+	padding: calc(var(--spacing) * 5);
+	background-color: var(--neutral-light-grayish-magenta);
+	border-radius: calc(var(--spacing) * 2);
+}
+
+.rateDescription {
+	font-weight: 700;
+	line-height: 0;
+	color: var(--primary-very-dark-magenta);
+}
+
+.stars {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: calc(var(--spacing) * 2);
+}

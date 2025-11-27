@@ -23,12 +23,12 @@
 }
 
 html {
-	font: inherit;
 	color-scheme: light;
 }
 
 body {
 	min-height: 100vh;
+	font-size: calc(var(--spacing) * 3.75);
 	line-height: 1.4;
 }
 
