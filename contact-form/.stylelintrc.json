@@ -1,0 +1,16 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-recess-order"],
+    "plugins": ["stylelint-plugin-defensive-css"],
+    "rules": {
+        "custom-property-pattern": null,
+        "selector-class-pattern": null,
+        "plugin/use-defensive-css": [
+            true,
+            {
+                "severity": "warning",
+                "flex-wrapping": true,
+                "background-repeat": true
+            }
+        ]
+    }
+}
