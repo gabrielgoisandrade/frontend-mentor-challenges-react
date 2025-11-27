@@ -3,3 +3,13 @@
 	flex-wrap: wrap;
 	gap: calc(var(--spacing) * 5);
 }
+
+@media (width >=768px) {
+	.rates {
+		flex-flow: column nowrap;
+		place-self: end;
+		align-items: end;
+		min-width: 100%;
+		margin-top: 1rem;
+	}
+}

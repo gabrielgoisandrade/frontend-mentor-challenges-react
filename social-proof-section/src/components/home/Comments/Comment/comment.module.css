@@ -30,17 +30,3 @@
 	font-weight: 400;
 	color: var(--primary-soft-pink);
 }
-
-@media (width >=768px) {
-	.comment {
-		flex: 1;
-	}
-
-	.comment:nth-child(2) {
-		margin-top: calc(var(--spacing) * 4);
-	}
-
-	.comment:nth-child(3) {
-		margin-top: calc(var(--spacing) * 8);
-	}
-}

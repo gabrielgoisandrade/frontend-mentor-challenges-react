@@ -3,9 +3,3 @@
 	flex-direction: column;
 	gap: calc(var(--spacing) * 5);
 }
-
-@media (width >= 768px) {
-	.comments {
-		flex-flow: row nowrap;
-	}
-}
