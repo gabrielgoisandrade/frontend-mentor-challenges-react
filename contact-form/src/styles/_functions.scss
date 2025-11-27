@@ -1,0 +1,7 @@
+@use 'sass:meta';
+
+@function calc-em($value: 0) {
+    $spacing: 0.25rem;
+
+    @return calc($spacing * $value);
+}
