@@ -1,0 +1,19 @@
+@use '../styles/variables' as *;
+@use '../styles/functions' as *;
+
+/* @define contact */
+.contact {
+    gap: calc-rem(6);
+    max-width: calc-rem(93.5);
+    padding: calc-rem(5);
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: calc-rem(4);
+}
+
+.contact__title {
+    margin-bottom: calc-rem(6);
+    font-size: calc-rem(7);
+    color: $grey-900;
+    letter-spacing: -0.1rem;
+}

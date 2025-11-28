@@ -1,0 +1,17 @@
+@use '../styles/variables' as *;
+@use '../styles/functions' as *;
+
+/* @define form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: calc-rem(5);
+}
+
+.form__submit {
+    padding-block: calc-rem(3);
+    color: $white;
+    background-color: $primary-green-600;
+    border: none;
+    border-radius: calc-rem(2);
+}

@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use 'variables';
 @use 'functions' as *;
 
 *,
@@ -13,13 +13,17 @@
 }
 
 html {
-    color-scheme: light dark;
     scroll-behavior: smooth;
 }
 
 body {
     min-height: 100vh;
     line-height: 1.4;
+    background-color: variables.$primary-green-200;
+}
+
+main {
+    padding: calc-rem(5);
 }
 
 img,
@@ -37,6 +41,6 @@ select {
     font: inherit;
 }
 
-label {
-    font-size: calc-em(4);
+fieldset {
+    border: none;
 }

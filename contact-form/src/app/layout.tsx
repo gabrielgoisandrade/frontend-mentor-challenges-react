@@ -5,15 +5,16 @@ import { Karla } from 'next/font/google'
 const karla = Karla({
     weight: ['400', '700'],
     subsets: ['latin'],
+    fallback: ['sans-serif'],
 })
 
 export const metadata: Metadata = {
     title: 'Contact Form',
     description: 'Frontend Mentor Challenge',
-	authors: {
-		name: 'Gabriel Gois Andrade',
-		url: 'https://github.com/gabrielgoisandrade'
-	}
+    authors: {
+        name: 'Gabriel Gois Andrade',
+        url: 'https://github.com/gabrielgoisandrade',
+    },
 }
 
 export default function RootLayout({
@@ -23,7 +24,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={karla.className}>{children}</body>
+            <body className={karla.className}>
+                <main>{children}</main>
+            </body>
         </html>
     )
 }

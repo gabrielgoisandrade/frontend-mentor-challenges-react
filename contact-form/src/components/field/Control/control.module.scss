@@ -1,0 +1,14 @@
+@use '../../../styles/functions' as *;
+@use '../../../styles/variables' as *;
+
+/* @define control */
+.control {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.control__label {
+    font-size: calc-rem(3);
+    color: $grey-500;
+}
