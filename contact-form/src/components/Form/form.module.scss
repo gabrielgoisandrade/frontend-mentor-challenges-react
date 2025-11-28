@@ -1,5 +1,5 @@
-@use '../styles/variables' as *;
-@use '../styles/functions' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/functions' as *;
 
 /* @define form */
 .form {
@@ -14,4 +14,9 @@
     background-color: $primary-green-600;
     border: none;
     border-radius: calc-rem(2);
+	transition: background-color 150ms ease-in-out;
+
+    &:hover {
+        background-color: $primary-green-900;
+    }
 }

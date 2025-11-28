@@ -1,6 +1,9 @@
 @use '../../../styles/functions' as *;
+@use '../../../styles/variables' as *;
 
 /* @define input */
 .input {
-    border-radius: calc-rem(2);
+    padding: calc-rem(2.5) calc-rem(4);
+    border: 1px solid $grey-500;
+    border-radius: calc-rem(1.5);
 }

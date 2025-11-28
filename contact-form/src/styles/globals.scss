@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables' as *;
 @use 'functions' as *;
 
 *,
@@ -19,7 +19,7 @@ html {
 body {
     min-height: 100vh;
     line-height: 1.4;
-    background-color: variables.$primary-green-200;
+    background-color: $primary-green-200;
 }
 
 main {
@@ -41,6 +41,17 @@ select {
     font: inherit;
 }
 
-fieldset {
-    border: none;
+input:where([type='radio'], [type='checkbox']) {
+    width: calc-rem(4.5);
+    height: calc-rem(4.5);
+    accent-color: $primary-green-600;
+}
+
+:is(input:not([type='radio'], [type='checkbox']), textarea) {
+    transition: border-color 150ms ease-in-out;
+
+    &:is(:hover, :focus) {
+        outline: none;
+        border-color: $primary-green-600;
+    }
 }

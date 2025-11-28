@@ -1,0 +1,9 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/functions' as *;
+
+/* @define input-checkbox */
+.input-checkbox {
+    width: calc-rem(4.5);
+    height: calc-rem(4.5);
+    color: $grey-900;
+}

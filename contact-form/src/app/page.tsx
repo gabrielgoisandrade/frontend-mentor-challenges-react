@@ -1,70 +1,48 @@
-'use client'
-
+import { Fieldset } from '@/components/field/Fieldset'
 import { Input } from '@/components/field/Input'
-import { FormEvent } from 'react'
+import { InputCheckbox } from '@/components/field/InputCheckbox'
+import { InputRadio } from '@/components/field/InputRadio'
+import { Textarea } from '@/components/field/Textarea'
+import { Form } from '@/components/Form'
+import { FormRow } from '@/components/FormRow'
 import styles from './page.module.scss'
 
 export default function Home() {
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-    }
-
     return (
         <section className={styles.contact}>
             <h2 className={styles.contact__title}>Contact Us</h2>
 
-            <form
-                onSubmit={handleSubmit}
-                className={styles.contact__form}
-                method='GET'
-            >
-                {/* first name */}
-                <Input label='First Name *' />
-                <label>
-                    <span>First Name *</span>
-                    <input type='text' name='firstName' />
-                </label>
+            <Form>
+                <FormRow>
+                    {/* first name */}
+                    <Input label='First Name *' name='firstName' />
 
-                {/* last name */}
-                <label>
-                    <span>Last Name *</span>
-                    <input type='text' name='lastName' />
-                </label>
+                    {/* last name */}
+                    <Input label='Last Name *' type='text' name='lastName' />
+                </FormRow>
 
                 {/* email */}
-                <label>
-                    <span>Email Address *</span>
-                    <input type='email' name='email' />
-                </label>
+                <Input label='Email Address *' type='email' name='email' />
 
                 {/* query type */}
-                <fieldset>
-                    <legend>Query type *</legend>
-                    <label>
-                        <input type='radio' name='queryType' /> General Enquiry
-                    </label>
-                    <label>
-                        <input type='radio' name='queryType' /> Support Request
-                    </label>
-                </fieldset>
+                <Fieldset legend='Query Type *'>
+                    <FormRow>
+						<InputRadio label='General Enquiry' name='queryType' />
+						<InputRadio label='Support Request' name='queryType' />
+					</FormRow>
+                </Fieldset>
 
                 {/* message */}
-                <label>
-                    <span>Message *</span>
-                    <textarea name='message' rows={8}></textarea>
-                </label>
+                <Textarea label='Message *' name='message' rows={8}></Textarea>
 
                 {/* allow contact */}
-                <label>
-                    <input type='checkbox' name='allowContact' />I consent to
-                    being contacted by the team *
-                </label>
-
-                {/* submit */}
-                <button className={styles.form__submit} type='submit'>
-                    Submit
-                </button>
-            </form>
+                <InputCheckbox
+                    type='checkbox'
+                    name='allowContact'
+                    label='I consent to
+                    being contacted by the team *'
+                />
+            </Form>
         </section>
     )
 }
