@@ -2,12 +2,12 @@ import { ReactNode } from 'react'
 import styles from './control.module.scss'
 
 type ControlProps = {
-    label?: string
     children: ReactNode
-    error?: string
+    label?: string
+    errorMessage?: string
 }
 
-export const Control = ({ label, children, error }: ControlProps) => {
+export const Control = ({ label, children, errorMessage }: ControlProps) => {
     return (
         <div className={styles.control}>
             <label className={styles.control__wrapper}>
@@ -19,8 +19,10 @@ export const Control = ({ label, children, error }: ControlProps) => {
                 {children}
             </label>
 
-            {error ? (
-                <span className={styles['control__error-message']}>error</span>
+            {errorMessage ? (
+                <span className={styles['control__error-message']}>
+                    {errorMessage}
+                </span>
             ) : (
                 ''
             )}

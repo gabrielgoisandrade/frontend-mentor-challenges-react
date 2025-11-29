@@ -1,24 +1,25 @@
 'use client'
 
-import { FormEvent, ReactNode } from 'react'
+import { submitForm } from '@/actions/Submit'
+import { useValidationContext } from '@/contexts/form/validationContext'
+import { ComponentProps, ReactNode } from 'react'
 import styles from './form.module.scss'
 
 type FormProps = {
     children: ReactNode
-}
+} & ComponentProps<'form'>
 
 export const Form = ({ children }: FormProps) => {
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+    const { setFields } = useValidationContext()
 
-		// valida campos
-		// manda a mensagem via context (ou dispatcher) para o control
-		// control recebe e coloca a mensagem na tela
-		// envia um boolean se tem erro para os outros componentes de input para aplicar a classe de erro
+    const handleSubmit = async (form: FormData) => {
+        const results = await submitForm(form)
+
+        if (results.length) setFields(results)
     }
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit} action=''>
+        <form className={styles.form} action={handleSubmit}>
             {children}
 
             <button className={styles.form__submit} type='submit'>

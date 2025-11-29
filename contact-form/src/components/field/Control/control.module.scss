@@ -36,6 +36,10 @@
     border-radius: calc-rem(1.5);
 }
 
+.control__wrapper:has(input:where([type='radio'], [type='checkbox']).invalid) {
+    border-color: $primary-red;
+}
+
 .control__wrapper:has(input:is([type='radio'], [type='checkbox']):hover) {
     border-color: $primary-green-600;
 }
