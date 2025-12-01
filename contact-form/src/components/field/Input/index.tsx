@@ -22,6 +22,8 @@ export const Input = ({ label, ...props }: InputProps) => {
             <Control label={label} hasError={!!field?.error}>
                 <input
                     className={clsx(styles.input, field?.error && 'invalid')}
+                    aria-invalid={!!field?.error}
+                    aria-describedby='error-message'
                     {...props}
                 />
             </Control>

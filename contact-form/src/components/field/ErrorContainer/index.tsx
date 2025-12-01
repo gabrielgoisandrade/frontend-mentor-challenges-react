@@ -12,9 +12,13 @@ export const ErrorContainer = ({
             {children}
 
             {errorMessage ? (
-                <span className={styles['error-container__message']}>
+                <p
+                    role='alert'
+                    id='error-message'
+                    className={styles['error-container__message']}
+                >
                     {errorMessage}
-                </span>
+                </p>
             ) : (
                 ''
             )}
