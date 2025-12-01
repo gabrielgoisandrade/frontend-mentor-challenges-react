@@ -1,6 +1,6 @@
+import { Fields } from './fields'
+
 export type FieldError = {
-    [k: string]: {
-        error?: string
-        hasError: boolean
-    }
+    field: Fields
+    error: string
 }

@@ -1,9 +1,11 @@
 'use client'
 
 import { useValidationContext } from '@/contexts/form/validationContext'
+import getError from '@/utils/getError'
 import { clsx } from 'clsx'
 import { ComponentProps } from 'react'
 import { Control } from '../Control'
+import { ErrorContainer } from '../ErrorContainer'
 import styles from './input.module.scss'
 
 type InputProps = {
@@ -11,14 +13,18 @@ type InputProps = {
 } & ComponentProps<'input'>
 
 export const Input = ({ label, ...props }: InputProps) => {
-    const { field } = useValidationContext(props.name)
+    const { fieldErrors } = useValidationContext()
+
+    const field = getError(fieldErrors, props.name!)
 
     return (
-        <Control label={label} errorMessage={field?.error}>
-            <input
-                className={clsx(styles.input, field?.hasError && 'invalid')}
-                {...props}
-            />
-        </Control>
+        <ErrorContainer errorMessage={field?.error}>
+            <Control label={label} hasError={!!field?.error}>
+                <input
+                    className={clsx(styles.input, field?.error && 'invalid')}
+                    {...props}
+                />
+            </Control>
+        </ErrorContainer>
     )
 }

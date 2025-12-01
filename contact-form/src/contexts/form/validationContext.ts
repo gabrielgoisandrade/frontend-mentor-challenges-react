@@ -4,20 +4,13 @@ import { FieldError } from '@/@types/fieldError'
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
 type ValidationContextProps = {
-    field: FieldError
-    setFields: Dispatch<SetStateAction<FieldError[]>>
+    fieldErrors: FieldError[]
+    setFieldErrors: Dispatch<SetStateAction<FieldError[]>>
 }
 
 export const ValidationContext = createContext<ValidationContextProps>({
-    field: {},
-    setFields: () => {},
+    fieldErrors: [],
+    setFieldErrors: () => {},
 })
 
-export const useValidationContext = (fieldName?: string) => {
-    const { field, setFields } = useContext(ValidationContext)
-
-    return {
-        field: fieldName ? field[fieldName] : undefined,
-        setFields,
-    }
-}
+export const useValidationContext = () => useContext(ValidationContext)

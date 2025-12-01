@@ -1,8 +1,9 @@
 'use client'
 
-import { submitForm } from '@/actions/Submit'
+import { submitForm } from '@/actions/submit'
 import { useValidationContext } from '@/contexts/form/validationContext'
-import { ComponentProps, ReactNode } from 'react'
+import { ComponentProps, ReactNode, useState } from 'react'
+import { Toast } from '../Toast'
 import styles from './form.module.scss'
 
 type FormProps = {
@@ -10,21 +11,34 @@ type FormProps = {
 } & ComponentProps<'form'>
 
 export const Form = ({ children }: FormProps) => {
-    const { setFields } = useValidationContext()
+    const [success, setSuccess] = useState(false)
+
+    const { setFieldErrors } = useValidationContext()
 
     const handleSubmit = async (form: FormData) => {
         const results = await submitForm(form)
 
-        if (results.length) setFields(results)
+        if (results.length) {
+            setFieldErrors(results)
+            setSuccess(false)
+            return
+        }
+
+        setSuccess(true)
+        window.scrollTo({ top: 0 })
     }
 
     return (
-        <form className={styles.form} action={handleSubmit}>
-            {children}
+        <>
+            {success && <Toast />}
 
-            <button className={styles.form__submit} type='submit'>
-                Submit
-            </button>
-        </form>
+            <form className={styles.form} action={handleSubmit}>
+                {children}
+
+                <button className={styles.form__submit} type='submit'>
+                    Submit
+                </button>
+            </form>
+        </>
     )
 }

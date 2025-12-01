@@ -55,7 +55,3 @@ input:where([type='radio'], [type='checkbox']) {
         border-color: $primary-green-600;
     }
 }
-
-.invalid {
-    border-color: $primary-red;
-}

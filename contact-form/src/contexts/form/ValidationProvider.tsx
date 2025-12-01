@@ -9,10 +9,10 @@ type ValidationProviderProps = {
 }
 
 export const ValidationProvider = ({ children }: ValidationProviderProps) => {
-    const [field, setField] = useState<FieldError>({})
+    const [fieldErrors, setFieldErrors] = useState<FieldError[]>([])
 
     return (
-        <ValidationContext.Provider value={{ field, setFields: setField }}>
+        <ValidationContext.Provider value={{ fieldErrors, setFieldErrors }}>
             {children}
         </ValidationContext.Provider>
     )
