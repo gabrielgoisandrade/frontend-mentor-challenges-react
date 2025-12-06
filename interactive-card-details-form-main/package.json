@@ -1,32 +1,33 @@
 {
-  "name": "interactive-card-details-form-main",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "^16.0.7",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.6",
-    "prettier": "^3.7.4",
-    "stylelint": "^16.26.1",
-    "stylelint-config-recess-order": "^7.4.0",
-    "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-order": "^7.0.0",
-    "stylelint-plugin-defensive-css": "^1.0.4",
-    "stylelint-selector-bem-pattern": "^4.0.1",
-    "typescript": "^5"
-  }
+    "name": "interactive-card-details-form-main",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint"
+    },
+    "dependencies": {
+        "next": "^16.0.7",
+        "react": "19.2.0",
+        "react-dom": "19.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "babel-plugin-react-compiler": "1.0.0",
+        "eslint": "^9",
+        "eslint-config-next": "16.0.6",
+        "prettier": "^3.7.4",
+        "sass": "^1.94.2",
+        "stylelint": "^16.26.1",
+        "stylelint-config-recess-order": "^7.4.0",
+        "stylelint-config-standard-scss": "^16.0.0",
+        "stylelint-order": "^7.0.0",
+        "stylelint-plugin-defensive-css": "^1.0.4",
+        "stylelint-selector-bem-pattern": "^4.0.1",
+        "typescript": "^5"
+    }
 }
