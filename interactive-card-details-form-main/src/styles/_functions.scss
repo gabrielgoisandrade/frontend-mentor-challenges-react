@@ -1,0 +1,5 @@
+@function calc-rem($value: 0) {
+    $spacing: 0.25rem;
+
+    @return calc($spacing * $value);
+}
