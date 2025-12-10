@@ -1,4 +1,5 @@
 @use '../styles/functions' as *;
+@use '../styles/variables' as *;
 
 .page {
     max-width: calc-rem(92.5);
@@ -8,13 +9,16 @@
 }
 
 .card {
-	display: flex;
-	flex-direction: column;
-    border: red 1px solid;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: calc-rem(10) calc-rem(5);
 }
 
-.card-front,
-.card-back {
-	width: 80%;
-	height: auto;
+.form {
+	display: flex;
+	flex-direction: column;
+	margin-top: calc-rem(20);
+	font-size: calc-rem(3);
+	color: $purple-950;
+	letter-spacing: .075rem
 }

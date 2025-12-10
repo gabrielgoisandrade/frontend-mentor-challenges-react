@@ -1,13 +1,13 @@
-import { Cards } from '@/components/Cards'
+import { Card } from '@/components/Card'
 import styles from './page.module.scss'
 
 export default function Home() {
     return (
         <main className={styles.page}>
             <article className={styles.card}>
-                <Cards />
+                <Card />
 
-                <form>
+                <form className={styles.form}>
                     <label>
                         <span>CARDHOLDER NAME</span>
                         <input type='text' />
