@@ -1,0 +1,15 @@
+/* @define field-wrapper */
+
+@use '../../../styles/functions' as *;
+@use '../../../styles/variables' as *;
+
+.field-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: calc-rem(2);
+}
+
+.field-wrapper__label {
+	font-size: calc-rem(3);
+	color: $purple-950;
+}

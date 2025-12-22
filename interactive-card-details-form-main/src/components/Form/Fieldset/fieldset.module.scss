@@ -1,0 +1,13 @@
+/* @define fieldset */
+
+@use '../../../styles/variables' as *;
+@use '../../../styles/functions' as *;
+
+.fieldset {
+	border: none
+}
+
+.fieldset__legend {
+	margin-bottom: calc-rem(2);
+	color: $purple-950;
+}

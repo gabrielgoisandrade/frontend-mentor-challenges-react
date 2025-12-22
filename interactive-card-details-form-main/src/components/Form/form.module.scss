@@ -1,0 +1,14 @@
+/* @define form */
+
+@use '../../styles/functions' as *;
+@use '../../styles/variables' as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: calc-rem(5);
+    margin-top: calc-rem(20);
+    font-size: calc-rem(3);
+    color: $purple-950;
+    letter-spacing: 0.075rem;
+}

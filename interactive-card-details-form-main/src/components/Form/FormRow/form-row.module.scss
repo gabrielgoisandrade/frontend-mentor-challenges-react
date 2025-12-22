@@ -1,0 +1,15 @@
+/* @define form-row */
+
+@use '../../../styles/functions' as *;
+
+.form-row {
+	display: flex;
+	flex-flow: row wrap;
+	gap: calc-rem(2);
+
+	/* stylelint-disable-next-line plugin/selector-bem-pattern */
+	& > * {
+		flex: 1;
+		min-width: 0
+	}
+}

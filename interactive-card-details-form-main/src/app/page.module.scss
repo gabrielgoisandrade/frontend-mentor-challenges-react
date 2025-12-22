@@ -10,15 +10,10 @@
 
 .card {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: calc-rem(10);
+    max-width: inherit;
     padding: calc-rem(10) calc-rem(5);
 }
 
-.form {
-	display: flex;
-	flex-direction: column;
-	margin-top: calc-rem(20);
-	font-size: calc-rem(3);
-	color: $purple-950;
-	letter-spacing: .075rem
-}
+

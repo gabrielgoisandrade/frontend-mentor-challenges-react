@@ -1,4 +1,8 @@
 import { Card } from '@/components/Card'
+import { Form } from '@/components/Form'
+import { Fieldset } from '@/components/Form/Fieldset'
+import { Wrapper } from '@/components/Form/Wrapper'
+import { FormRow } from '../components/Form/FormRow/index'
 import styles from './page.module.scss'
 
 export default function Home() {
@@ -7,36 +11,42 @@ export default function Home() {
             <article className={styles.card}>
                 <Card />
 
-                <form className={styles.form}>
-                    <label>
-                        <span>CARDHOLDER NAME</span>
-                        <input type='text' />
-                    </label>
+                <Form>
+                    <Wrapper label='CARDHOLDER NAME' for='name'>
+                        <input
+                            type='text'
+                            id='name'
+                            placeholder='e.g. Jane Appleseed'
+                        />
+                    </Wrapper>
 
-                    <label>
-                        <span>CARD NUMBER</span>
-                        <input type='text' />
-                    </label>
+                    <Wrapper label='CARD NUMBER' for='card-number'>
+                        <input
+                            type='text'
+                            id='card-number'
+                            placeholder='e.g. 1234 5678 9123 0000'
+                        />
+                    </Wrapper>
 
-                    <fieldset>
-                        <label>
-                            <span>EXP.DATE</span>
-                            <input type='text' />
-                        </label>
+                    <FormRow>
+                        <Fieldset legend='EXP. DATE (MM/YY)'>
+                            <FormRow>
+								<input type='text' id='month' placeholder='MM' />
+								<input type='text' id='year' placeholder='YY' />
+							</FormRow>
+                        </Fieldset>
 
-                        <label>
-                            <span>(MM/YY)</span>
-                            <input type='text' />
-                        </label>
-
-                        <label>
-                            <span>CVC</span>
-                            <input type='text' />
-                        </label>
-                    </fieldset>
+                        <Wrapper label='CVC' for='cvc'>
+                            <input
+                                type='text'
+                                id='cvc'
+                                placeholder='e.g. 123'
+                            />
+                        </Wrapper>
+                    </FormRow>
 
                     <button>Confirm</button>
-                </form>
+                </Form>
             </article>
         </main>
     )
